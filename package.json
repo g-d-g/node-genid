@@ -1,0 +1,24 @@
+{
+  "name": "node-genid",
+  "version": "1.0.0",
+  "description": "Simply and rapidly generate random IDs, with full customization",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FuturisticCake/node-genid.git"
+  },
+  "keywords": [
+    "id",
+    "generate",
+    "genid",
+    "node-genid",
+    "unique"
+  ],
+  "author": "Ethan Davis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FuturisticCake/node-genid/issues"
+  },
+  "homepage": "https://github.com/FuturisticCake/node-genid#readme"
+}

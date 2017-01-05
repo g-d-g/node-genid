@@ -1,33 +1,4 @@
-# node-genid
-
-> Simply generate random IDs from sets of characters, with full customization
-
-
-## Installation
-
-```
-npm install node-genid
-```
-
-
-## Demo Usage
-
-```
-const genid = require("node-genid");
-
-genid(7);
-```
-
-
-## API
-
-#### (length, characters)
-
-* `length` - Integer. Length of generated ID.
-* `characters` - Optional - Array of strings. List of characters to use for ID generation. Defaults to A-Z, a-z, 0-9
-
-
-## License (MIT)
+/*
 
 Copyright (c) 2017 Ethan Davis
 
@@ -36,3 +7,17 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+*/
+
+const defaultChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890".split("");
+
+module.exports = function(length, chars) {
+	var generating = "";
+	var availableChars = chars || defaultChars;
+	var charCount = chars ? chars.length : defaultChars.length;
+	for (var i = 0; i < length; i++) {
+		generating += chars ? chars[Math.floor(Math.random() * charCount)] : defaultChars[Math.floor(Math.random() * charCount)];
+	}
+	return generating;
+};
