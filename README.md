@@ -15,7 +15,7 @@ npm install node-genid
 ```
 const genid = require("node-genid");
 
-genid(7);
+genid(7); // 8aHC3y9
 ```
 
 
